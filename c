@@ -479,7 +479,6 @@ def passwrd():
                     pwx.append(name1+' '+mid_name+'123')
                     pwx.append(name1+' '+mid_name+'1234')
                     pwx.append(name1+' '+mid_name+'12345')
-            except:pass
             try: sur_name=name.split(" ")[2]
                 nam3=nam.split(" ")[2]
                 if len(sur_name) <3:
